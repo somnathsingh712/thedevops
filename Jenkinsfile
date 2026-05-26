@@ -18,8 +18,7 @@ pipeline {
 
         stage('Stop Existing Container') {
             steps {
-                sh 'docker stop node-container || true'
-                sh 'docker rm node-container || true'
+                sh 'docker rm -f node-container || true'
             }
         }
 
